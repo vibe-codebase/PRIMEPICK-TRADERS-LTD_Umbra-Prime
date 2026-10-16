@@ -8,7 +8,7 @@ cd "$(dirname "$0")/.."
 ORG="vibe-codebase"
 COMPANY="$(node -p "require('./app.json').expo.extra.company")"
 APP="$(node -p "require('./app.json').expo.name")"
-REPO="$(printf %s "$COMPANY" | tr "[:lower:]" "[:upper:]" | sed -E "s/[^A-Z0-9]+/-/g; s/^-|-\$//g")-$(printf %s "$APP" | sed -E "s/[^A-Za-z0-9]+/-/g; s/^-|-\$//g")"   # e.g. PRIME-PICK-TRADERS-LTD-Umbra-Prime (company caps, then game name)
+REPO="$(printf %s "$COMPANY" | tr "[:lower:]" "[:upper:]" | sed -E "s/[^A-Z0-9]+/-/g; s/^-|-\$//g")_$(printf %s "$APP" | sed -E "s/[^A-Za-z0-9]+/-/g; s/^-|-\$//g")"   # e.g. PRIME-PICK-TRADERS-LTD_Umbra-Prime (company caps, then game name)
 URL="https://github.com/$ORG/$REPO.git"
 OWNER="$(node -p "require('./app.json').expo.owner")"; SLUG="$(node -p "require('./app.json').expo.slug")"
 
