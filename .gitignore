@@ -31,3 +31,4 @@ yarn-error.log*
 Delivery/**/*.jks
 Delivery/**/*.aab
 Delivery/**/*-credentials.json
+*.zip

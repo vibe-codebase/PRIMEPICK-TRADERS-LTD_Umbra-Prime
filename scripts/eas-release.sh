@@ -29,6 +29,9 @@ echo "== 4/6 Commit the release state"
 git config user.name "$OWNER"; git config user.email "release@$SLUG.invalid"
 git add -A && git commit -qm "Release build" || true
 
+echo "== 4b/6 GitHub (private repo in vibe-codebase)"
+bash scripts/push-github.sh || echo "GitHub push skipped: see the message above. The build continues."
+
 echo "== 5/6 EAS cloud build (production AAB). EAS generates the upload keystore and stores it on the Expo server."
 $EAS build -p android --profile production --non-interactive --wait
 URL="$($EAS build:list -p android --status finished --limit 1 --json --non-interactive | node -e "let s='';process.stdin.on('data',d=>s+=d).on('end',()=>console.log(JSON.parse(s)[0].artifacts.buildUrl))")"
