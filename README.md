@@ -1,6 +1,6 @@
 # Umbra Prime
 
-By **PRIME PICK TRADERS LTD** · package `com.primepicktradersltd.umbraprime` · Expo owner `jahidbappi`.
+By **PRIMEPICK TRADERS LTD** · package `com.primepicktradersltd.umbraprime` · Expo owner `jahidbappi`.
 
 A touch puzzle game for Android about shadows. A lamp lights a sculpture of floating fragments, and you turn it until its shadow on the paper screen becomes a picture.
 

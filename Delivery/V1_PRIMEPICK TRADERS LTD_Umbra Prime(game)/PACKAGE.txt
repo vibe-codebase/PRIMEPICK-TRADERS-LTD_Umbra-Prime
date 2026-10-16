@@ -1,4 +1,4 @@
-Company:        PRIME PICK TRADERS LTD
+Company:        PRIMEPICK TRADERS LTD
 App name:       Umbra Prime
 Package:        com.primepicktradersltd.umbraprime
 Expo owner:     jahidbappi
